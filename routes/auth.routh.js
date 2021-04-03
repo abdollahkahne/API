@@ -16,4 +16,5 @@ router.use(cors({
 router.post("/signin", controller.verifyLogin);
 router.post("/signout", controller.signOut);
 router.post("/user", controller.getSigninStatus);
+
 module.exports = router;
