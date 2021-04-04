@@ -42,7 +42,7 @@ module.exports = {
         };
         const token = jwt.sign(credentials, JWT_SECRET, { expiresIn: "2h" });
         res.cookie("jwt", token, {
-          httpOnly: true, maxAge: 7200000, domain: process.env.COOKIE_DOMAIN, sameSite: "None", secure: true,
+          httpOnly: true, maxAge: 7200000, domain: process.env.COOKIE_DOMAIN,
         }).json(credentials);
       })
       .catch((err) => {
